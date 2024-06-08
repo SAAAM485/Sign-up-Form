@@ -16,7 +16,7 @@
         <div class="text-part">
             <h1 class="quote1">Sign up now! For the exclusive high-quality fans only premium pictures!</h1>
             <h1 class="quote2">"YOU <em>KNOW</em> YOU WANT TO."</h1>
-            <Form class="form" action="example.com/path" method="post">
+            <Form id="form" action="example.com/path" method="post">
                 <fieldset class="fieldset">
                     <legend>Let's do this!</legend>
                     <div class="form-row">
@@ -41,18 +41,18 @@
                     </div>
                     <div class="form-row">
                         <div class="input-row">
-                            <label for="password">PASSWORD</label>
-                            <input type="text" name="password" id="password"/>
+                            <label id="password_label" for="password">PASSWORD</label>
+                            <input type="text" name="password" id="password" onChange="onChange()"/>
                         </div>
                         <div class="input-row">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="text" name="confirm_password" id="confirm_password"/>
+                            <input type="text" name="confirm_password" id="confirm_password" onChange="onChange()"/>
+                            <span id="span"></span> 
                         </div>
                     </div>
                 </fieldset>
-                
-                <button type="submit">Create Account</button>
             </Form>
+            <button form="form" type="submit">Create Account</button>
             <div class="login">Already have an account? <b>Log in</b></div>
         </div>
     </div>
